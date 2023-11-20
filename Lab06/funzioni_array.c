@@ -1,11 +1,28 @@
 #include <stdio.h>
 
+/**
+ * The function `leggi_array` reads integers from the user and stores them in an array.
+ * 
+ * @param dati The parameter "dati" is an array of integers. It is used to store the values read from
+ * the user input.
+ * @param dim The parameter `dim` is of type `size_t`, which is an unsigned integer type used to
+ * represent the size of an array. It specifies the number of elements in the array `dati`.
+ */
 void leggi_array(int dati[], size_t dim){
     for(int i = 0; i < dim; i++){
         scanf("%d", &dati[i]);
     }
 }
 
+/**
+ * The function `conta_univoci` counts the number of unique elements in an array.
+ * 
+ * @param dati An array of integers containing the data to be checked for unique values.
+ * @param dim The parameter `dim` represents the size of the array `dati[]`. It indicates the number of
+ * elements in the array that need to be processed.
+ * 
+ * @return The function `conta_univoci` returns the number of unique elements in the array `dati`.
+ */
 int conta_univoci(const int dati[], size_t dim){
     int sum = 0;
     for(int i  = 0; i < dim; i++){
@@ -23,6 +40,14 @@ int conta_univoci(const int dati[], size_t dim){
     return sum;
 }
 
+/**
+ * The function "stampa_elementi_ripetuti" prints the elements that are repeated in two arrays.
+ * 
+ * @param fDati An array of integers representing the first set of data.
+ * @param fDim The size of the first array, fDati.
+ * @param sDati The parameter `sDati` is an array of integers containing the second set of data.
+ * @param sDim The parameter `sDim` represents the size or length of the array `sDati`.
+ */
 void stampa_elementi_ripetuti(const int fDati[], size_t fDim, const int sDati[], size_t sDim){
     for(int i = 0; i < fDim; i++){
         int check = 1;
@@ -37,6 +62,10 @@ void stampa_elementi_ripetuti(const int fDati[], size_t fDim, const int sDati[],
     }
 }
 
+/**
+ * The main function reads two arrays from user input, counts the number of unique elements in each
+ * array, and prints the count of unique elements for each array.
+ */
 int main(){
     int dim1;
     int dim2;

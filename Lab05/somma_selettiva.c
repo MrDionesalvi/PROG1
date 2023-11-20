@@ -62,4 +62,5 @@ int main(void) {
         }
         printf("%d", somma);
     }
+    return 0;
 }

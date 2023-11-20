@@ -15,6 +15,17 @@ Le otto 🪜scale (base, cima) si trovano nelle seguenti caselle:
 mentre le sette 🐍serpi (testa, coda) si trovano nelle seguenti caselle:
 (32,10) (36,6) (48,26) (62,18) (88,24) (95,56) (97,78)
 */
+/**
+ * The function "muovi_giocatore" moves a player on a game board based on the value of a dice roll, and
+ * returns true if the dice roll is a 6.
+ * 
+ * @param dado An integer representing the number rolled on the dice.
+ * @param pos The parameter `pos` is a pointer to an integer that represents the current position of
+ * the player on the game board.
+ * 
+ * @return a boolean value. If the value of the variable "dado" is 6, then the function returns true
+ * (1). Otherwise, it returns false (0).
+ */
 bool muovi_giocatore(int dado, int* pos) {
 	int dimS = 8;
     int bScale[] = {1 , 4,  8,  21, 28, 50, 71, 80};
