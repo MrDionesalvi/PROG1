@@ -51,19 +51,14 @@ int main(void) {
                 resultRiga++;
             }
         }
-        //printf("%d %zu\n", resultColonna, cols);
         if(resultRiga == cols){
-            //printf("Dentro con %d \n", i);
             for (size_t j = 0; j < cols; j++){
                 int resultColonna = 0;
-                //printf("Dentro il for con la riga %d\n", j);
                 for(size_t k = 0; k < rows; k++){
-                    //printf("Dentro il for con la riga %d\n", k);
                     if(div(mat[k][j])){
                         resultColonna++;
                     }
                 }
-                //printf("%d", resultRiga);
                 if(resultColonna == rows){
                     printf("%zu %zu\n", i, j);
                 }
