@@ -18,6 +18,16 @@ Result
 #include <stdio.h>
 #include <stdbool.h>
 
+/**
+ * The function `leggi_matrice_irregolare` reads an irregular matrix from user input, where each row
+ * has a different number of columns.
+ * 
+ * @param rows The number of rows in the matrix.
+ * @param cols The parameter "cols" represents the number of columns in the matrix.
+ * @param mat A 2D array representing the matrix.
+ * @param rags The parameter "rags" is an array of size "rows" that stores the number of columns for
+ * each row in the matrix.
+ */
 void leggi_matrice_irregolare(const size_t rows, const size_t cols,
 				              int mat[rows][cols], size_t rags[rows]) 
 {
@@ -44,6 +54,8 @@ int main(void) {
 	size_t ragsB[rowsB];
 	leggi_matrice_irregolare(rowsB, colsB, matB, ragsB);
 
+	/* The code snippet is a nested loop that compares each row of matrix A with each row of matrix B to
+	check if any row in A is a prefix of a row in B. */
 	for(size_t i = 0; i < rowsA; i++){
         for(size_t j = 0; j < rowsB; j++){
             int counter = 0;

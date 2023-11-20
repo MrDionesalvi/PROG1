@@ -11,6 +11,7 @@ SUGGERIMENTO: leggere i caratteri che formano la griglia di gioco 3x3 usando sca
 #include <stdio.h>
 #include <stdbool.h>
 
+
 char winner(size_t len, char board[len][len]);
 
 int main(){
@@ -27,6 +28,20 @@ int main(){
 
 }
 
+/**
+ * The function "winner" checks for a winner in a tic-tac-toe board by examining the rows, columns, and
+ * diagonals.
+ * 
+ * @param len The parameter `len` represents the size of the board. It is of type `size_t`, which is an
+ * unsigned integer type used for representing sizes and counts. In this case, it represents the number
+ * of rows and columns in the `board` array.
+ * @param board The `board` parameter is a 2-dimensional array of characters representing a tic-tac-toe
+ * board. The size of the board is `len` by `len`, where `len` is the number of rows and columns in the
+ * board. Each element of the array represents a cell on the
+ * 
+ * @return the character that represents the winner of the game. If there is no winner, the function
+ * returns '-' indicating a tie or an ongoing game.
+ */
 char winner(size_t len, char board[len][len]){
     char ret = '-';
 

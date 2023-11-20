@@ -16,6 +16,14 @@ Result
 #include <stdio.h>
 #include <stdbool.h>
 
+/**
+ * The function `leggi_matrice` reads values from the user and stores them in a 2D array.
+ * 
+ * @param rows The number of rows in the matrix.
+ * @param cols The parameter "cols" represents the number of columns in the matrix.
+ * @param mat The parameter "mat" is a 2D array of integers. It represents a matrix with "rows" number
+ * of rows and "cols" number of columns.
+ */
 void leggi_matrice(const size_t rows, const size_t cols,
 				   int mat[rows][cols]) {
 	for (size_t r=0; r<rows; r++) {
@@ -25,6 +33,14 @@ void leggi_matrice(const size_t rows, const size_t cols,
 	}
 }
 
+/**
+ * The function "div" returns 1 if the input number is a positive even number, and 0 otherwise.
+ * 
+ * @param a The parameter "a" is an integer value that represents the number being checked for
+ * divisibility and if is >= 0.
+ * 
+ * @return the value of the variable "ret".
+ */
 int div(int a){
     int ret = 0;
     if(a % 2 == 0 && a >= 0)
@@ -43,7 +59,11 @@ int main(void) {
 	// leggi i dati
 	leggi_matrice(rows, cols, mat);
 
-	// COMPLETARE
+	
+    /* The code snippet is iterating over each row of the matrix and checking if all the numbers in that
+    row are non-negative and even. If all the numbers in the row satisfy the condition, it then iterates
+    over each column and checks if all the numbers in that column are non-negative and even. If both the
+    row and column satisfy the condition, it prints the indices of that cell (row and column) as output. */
     for (size_t i = 0; i < rows; i++){
         int resultRiga = 0;
         for (size_t j = 0; j < cols; j++){
