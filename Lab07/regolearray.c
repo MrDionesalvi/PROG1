@@ -1,8 +1,20 @@
 #include <stdio.h>
 
-// copia in pB (dimensione massima nmaxB) tutti gli elementi 
-// dell'array pA (dimensione lenA) seguendo le regole.
-// ritorna il numero di elementi copiati
+
+/**
+ * The function `trasforma_array` takes an array `pA` of integers and its length `lenA`, and transforms
+ * it into another array `pB` of integers with a maximum length of `nmaxB` based on certain conditions.
+ * 
+ * @param pA A pointer to the first element of an array of integers.
+ * @param lenA The parameter `lenA` represents the length of the array `pA`. It specifies the number of
+ * elements in the array `pA` that should be considered for processing.
+ * @param pB pB is a pointer to an array of integers where the transformed elements will be stored.
+ * @param nmaxB The parameter `nmaxB` represents the maximum size of the array `pB`. It specifies the
+ * maximum number of elements that can be stored in the array `pB`.
+ * 
+ * @return The function `trasforma_array` returns the value of the variable `counter`, which represents
+ * the number of elements that have been successfully transformed and stored in the array `pB`.
+ */
 size_t trasforma_array(const int* pA, const size_t lenA,
 					   int *pB, const size_t nmaxB){
     

@@ -31,6 +31,16 @@ NO
 #include <stdio.h>
 #include <stdbool.h>
 
+/**
+ * The function `leggi_matrice_irregolare` reads an irregular matrix from user input, where each row
+ * has a different number of columns.
+ * 
+ * @param rows The number of rows in the matrix.
+ * @param cols The parameter "cols" represents the number of columns in the matrix.
+ * @param mat A 2D array representing the matrix.
+ * @param rags The parameter "rags" is an array of size "rows" that stores the number of columns for
+ * each row in the matrix.
+ */
 void leggi_matrice_irregolare(const size_t rows, const size_t cols,
 				              int mat[rows][cols], size_t rags[rows]) 
 {
@@ -42,6 +52,14 @@ void leggi_matrice_irregolare(const size_t rows, const size_t cols,
 	}
 }
 
+/**
+ * The function `leggi_matrice_regolare` reads values from the user and stores them in a 2D array.
+ * 
+ * @param rows The number of rows in the matrix.
+ * @param cols The parameter "cols" represents the number of columns in the matrix.
+ * @param mat The parameter "mat" is a 2-dimensional array of integers with "rows" rows and "cols"
+ * columns.
+ */
 void leggi_matrice_regolare(const size_t rows, const size_t cols,
 				              int mat[rows][cols]) 
 {
@@ -67,11 +85,17 @@ int main(void) {
 	int quesiti[q][2];
     leggi_matrice_regolare(q, 2, quesiti);
 
+    /* The code snippet is a loop that iterates through each query and checks for the type of connection
+    between two cities. */
     for(size_t i = 0; i < q; i++){
         int found = 0;
         int fromStation = quesiti[i][0];
         int toStation = quesiti[i][1];
 
+        /* This for loop is iterating through the connections of the "fromStation" city. It checks if
+        there is a direct connection between the "fromStation" and the "toStation" by comparing the
+        values in the "mat" matrix. If a direct connection is found, the variable "found" is set to
+        1. */
         for(size_t j = 0; j < rags[fromStation] && !found; j++){
             if(toStation == mat[fromStation][j]){
                 found = 1;

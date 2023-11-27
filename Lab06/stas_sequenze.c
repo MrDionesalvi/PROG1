@@ -29,6 +29,13 @@ Result
 #include <stdio.h>
 #include <stdbool.h>
 
+/**
+ * The function reads a sequence of numbers from the user, calculates the sum of the numbers, the sum
+ * of their squares, and the maximum number in the sequence, and then prints the results.
+ * 
+ * @param firstNumber The `firstNumber` parameter is the first number in the sequence that you want to
+ * read.
+ */
 void leggi_sequenza(int firstNumber) {
     int numero = firstNumber;
     int sommaEl = firstNumber;
@@ -52,6 +59,12 @@ void leggi_sequenza(int firstNumber) {
     printf("%d %d %d\n", sommaEl, sommaQuadEl, maxEl);
 }
 
+/**
+ * The main function reads a sequence of numbers until a zero is entered, and calls the function
+ * "leggi_sequenza" for each non-zero number.
+ * 
+ * @return The main function is returning an integer value of 0.
+ */
 int main(void) {
     int fNumero = 1;
     int check = 1;

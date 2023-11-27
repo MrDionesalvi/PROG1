@@ -2,7 +2,14 @@
 #include <stdbool.h>
 #include <string.h>
 
-// ritorna true se il carattere ch è una vocale
+/**
+ * The function checks if a given character is a vowel.
+ * 
+ * @param ch The parameter `ch` is a character that we want to check if it is a vowel or not.
+ * 
+ * @return The function is_vowel is returning a boolean value indicating whether the given character is
+ * a vowel or not.
+ */
 bool is_vowel(char ch) {
 #   define NUM_VOWELS 10
     const char vowels[NUM_VOWELS] = { 'a', 'e', 'i', 'o', 'u', 'A', 'E', 'I', 'O', 'U' };
@@ -24,6 +31,11 @@ int main(void) {
 
     scanf("%s", parola);
     
+    /* The code snippet is iterating over each character in the string `parola` and checking if the
+    character is a vowel or not using the `is_vowel` function. If the character is not a vowel, it
+    is added to the string `prl` at the current index `startPrl` and `startPrl` is incremented. This
+    effectively removes all the vowels from the string `parola` and stores the result in the string
+    `prl`. */
     for(size_t i = 0; i < strlen(parola); i++){
         if(!is_vowel(parola[i])){
             prl[startPrl] = parola[i];
