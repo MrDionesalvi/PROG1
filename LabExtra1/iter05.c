@@ -15,10 +15,9 @@ bool e1(const size_t rows, const size_t cols,
     int count = 0;
     for (size_t i = 1; i < rows; i++){
         int ammount = rags[i];
-        for (size_t j = 0; j < ammount; j++){
+        for (int j = 0; j < ammount; j++){
             int posDelete;
             bool findEl = false;
-            //printf("Cerco l'elemento: %d, sono alla %zu:%zu colonna\n", mat[i][j], i,j);
             for (size_t k = 0; k < rags[i-1] && !findEl; k++){
                 if(mat[i][j] == mat[i-1][k]){
                     findEl = true;
@@ -27,20 +26,15 @@ bool e1(const size_t rows, const size_t cols,
                     
             }
             if (findEl){
-                //printf("Trovato il signorotto per l'elemento: %d, nella posizione: %zu\n", mat[i][j], j);
                 for(size_t k = posDelete; k < rags[i]-1; k++){
                     mat[i][k] = mat[i][k+1];
                 }
                 rags[i]--;
-                if(j > 1){
-                    j--;
-                    ammount--;
-                }
+                j--;
+                ammount--;
                 count++;
             }
         }
-        //printf("\n");
-        
     }
     if(count > 0)
         ret = true;
