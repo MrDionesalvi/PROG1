@@ -16,7 +16,7 @@ int ricerca_binaria(const int a[], const int val,
                 const size_t left, const size_t right) {
     int ret = -1;
     if (left >= right)
-        return 0;
+        return ret;
     if (left+1==right) {
         if (a[left]==val) {
             ret = left;
@@ -51,7 +51,6 @@ bool trova_coppia(const int a[], const int somma_target,
             found = true;
             *pIndice1 = left;
             *pIndice2 = elFound;
-            return found;
         }
         else{
             return trova_coppia(a, somma_target, left+1, right, pIndice1, pIndice2);
