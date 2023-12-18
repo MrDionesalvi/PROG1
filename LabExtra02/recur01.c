@@ -12,7 +12,7 @@ Se non ci sono elementi nei due array, e2R restituisce 0
 #include <stdio.h>
 #include <stdbool.h>
 
-int e2R(const size_t aLen, const int a[], const size_t bLen, const int b[], size_t i, size_t value) {
+int e2R(const size_t aLen, const int a[], const size_t bLen, const int b[], size_t i, int value) {
     int ret = value;
     if(i >= bLen && i >= aLen){
         return ret;
