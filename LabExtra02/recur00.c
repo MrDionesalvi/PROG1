@@ -20,11 +20,11 @@ void e2R(const size_t aLen, const int a[], size_t* p_bLen, int b[], const int va
     else {
         if(a[i] > val && j < *p_bLen){
             b[j] = a[i] - val;
-            return e2R(aLen, a, p_bLen, b, val, ++i, ++j);
+            return e2R(aLen, a, p_bLen, b, val, i+1, j+1);
         }
         
     }
-    return e2R(aLen, a, p_bLen, b, val, ++i, j);
+    return e2R(aLen, a, p_bLen, b, val, i+1, j);
 }
 
 void e2(const size_t aLen, const int a[], size_t* p_bLen, int b[], 
