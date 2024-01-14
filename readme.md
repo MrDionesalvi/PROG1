@@ -9,6 +9,13 @@ Qui troverai una raccolta degli esercizi che ho affrontato durante il corso, spe
   - **Esercizio1/**: Descrizione dell'esercizio 1, soluzione e commenti.
   - **Esercizio2/**: Descrizione dell'esercizio 2, soluzione e commenti.
   - ...
+- **LabExtra**/: Contiene tutti gli esercizi in preprazione all'esame.
+- **LabPreEsame**/: Contiene tutti gli esercizi che sono stati proposti dal corso PROG1 (non laboratorio!).
+  - **Iterativa/**
+  - **Ricorsiva/**
+  - **Correttezza/**
+  - **Modello della memoria/**
+
 
 - **Utils/**: Una cartella di utility contenente script e strumenti di supporto.
 
