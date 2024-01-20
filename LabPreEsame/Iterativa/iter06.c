@@ -13,6 +13,14 @@ e1 non modifica la riga 0;
 per ciascuna riga i>0, la funzione e1 scorre gli elementi e filtra via tutti gli elementi che compaiono sulla riga precedente;
 e1 ritorna true se esiste almeno una riga che è stata modificata.
 */
+
+/*
+
+    VEDI SOLUZIONE MIGLIORE IN ESERCIZI_RANDOM/ITER06.C
+
+*/
+
+
 bool e1(const size_t rows, const size_t cols, 
 	    int mat[rows][cols], size_t rags[rows]) {
     bool ret = false;
